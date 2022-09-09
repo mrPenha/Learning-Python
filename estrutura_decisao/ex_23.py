@@ -5,6 +5,7 @@ print()
 numero = float(input('Insira um número: '))
 
 if numero // 1 == numero:
+    print(numero)
     print('Este é um número inteiro')
 
 else:

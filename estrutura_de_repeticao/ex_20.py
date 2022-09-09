@@ -11,26 +11,16 @@ while cont > 0:
 
     if ',' in numero:
         numero = numero.replace(',', '.')
+    else:
+        pass
 
     if numero.isnumeric():
         numero = float(numero)
 
-        if numero % numero == 0:
+        if numero != 0 and numero % numero == 0:
             numero = int(numero)
 
-            if numero < 0 or numero > 16:
-                print('insira um número maior que 0 e menor que 16 \n')
-                tentar = input('Gostaria de tentar novamente? [S][N]: ')
-                tentar = tentar.lower()
-                if tentar == 's':
-                    os.system('clear')
-                    print()
-                    cont = 1
-                else:
-                    print()
-                    quit()
-
-            else:
+            if numero > 0 and numero < 16:
 
                 novo_num = numero
                 print()
@@ -65,14 +55,26 @@ while cont > 0:
                     print()
                     cont = 1
                 else:
-                    print('Volte Sempre! \n')
+                    print('\nVolte Sempre! \n')
                     quit()
 
+            else:
+                os.system('clear')
+                print(
+                    '\nÉ permitido a entrada somente de números inteiros e positivos menores que 16 \n')
+
+        else:
+            os.system('clear')
+            print(
+                '\nÉ permitido a entrada somente de números inteiros e positivos menores que 16 \n')
+
     else:
-        print('\nInsira apenas números e número inteiros \n')
+        os.system('clear')
+        print('\nÉ permitido a entrada somente de números inteiros e positivos menores que 16 \n')
 
         tentar = input('Gostaria de tentar novamente? [S][N]: ')
         tentar = tentar.lower()
+
         if tentar == 's':
             os.system('clear')
             print()
