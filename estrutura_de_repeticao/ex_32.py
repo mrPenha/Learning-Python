@@ -1,5 +1,9 @@
-"""Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário. Ex.: 5!=5.4.3.2.1=120 """
-print()
+"""Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário. Ex.: 5!=5.4.3.2.1=120. A saída deve ser conforme o exemplo abaixo:
+
+    Fatorial de: 5
+    5! =  5 . 4 . 3 . 2 . 1 = 120"""
+import os
+os.system('clear')
 
 numero = int(input('Informe o número a ser fatorado: '))
 novo_num = numero
@@ -13,7 +17,7 @@ while cont < numero:
     if novo_num == 0:
         break
     else:
-        print(f'*{novo_num}', end='')
+        print(f'.{novo_num}', end='')
 
     r = numero * novo_num
 
