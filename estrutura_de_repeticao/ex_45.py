@@ -20,3 +20,59 @@
     Após concluir isto você poderia incrementar o programa permitindo que o professor digite o gabarito da prova antes dos alunos usarem o programa."""
 import os
 os.system('clear')
+
+while True:
+
+    print('VOCÊ É... \n(digite o número correspondente) \n\n1 - Professor \n2 - Aluno')
+    print('----------')
+    op = int(input('> '))
+
+    if op == 1:
+        os.system('clear')
+        print('\nInsira as respostas como A, B, C, D, e E\n')
+        qtd = int(input('Quantidade de questões: '))
+
+        resp = []
+        for i in range(1, qtd+1):
+            r = input(f'Questão {i}: ').upper()
+            resp += r
+
+        gabarito = []
+        for gabarito in resp:
+            gabarito = resp
+
+        os.system('clear')
+
+    elif op == 2:
+        os.system('clear')
+        print('\nInsira as respostas como A, B, C, D, e E\n')
+        print('\nGABARITO\n')
+
+        resposta_aluno = []
+        for i in range(1, qtd+1):
+            r = input('Resposta: ').upper()
+            resposta_aluno += r
+        break
+
+    else:
+        os.system('clear')
+        print('Opção Inválida\n\n')
+
+print()
+print('\nRESPOSTAS\n')
+print(f'\nGabarito : {gabarito}')
+print(f'\nRespostas: {resposta_aluno}')
+
+certo_errado = []
+c = 0
+while c < qtd:
+
+    if gabarito[c] == resposta_aluno[c]:
+        certo_errado += 'v'
+    else:
+        certo_errado += 'x'
+
+    c += 1
+
+print()
+print(f'Acertos  : {certo_errado}')
