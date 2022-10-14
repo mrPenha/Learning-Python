@@ -2,10 +2,6 @@ import os
 os.system('clear')
 
 
-def linha():
-    print(f'\n{"*" * 100} \n\n')
-
-
 """
 DESAFIO
 Faça um programa que leia 5 valores numéricos e guarde-os em uma lista. No final mostre qual foi o maior e o menor valor e suas respectivas posições na lista.
@@ -40,4 +36,3 @@ for i, j, in enumerate(valores):
         print(f'{i}...', end='')
 
 print()
-linha()
