@@ -179,3 +179,74 @@ lista_c[2] = '22'
 print(f'lista_a = {lista_a}')
 print(f'lista_c = {lista_c} ---> agora modificou somente a lista_c \n')
 linha()
+
+
+# declarar listas compostas
+pessoa = [['joao', 28], ['monique', 25], ['doroth', 7]]
+print('DECLARAR LISTAS COMPOSTAS \n')
+print(f'pessoas = {pessoa} \n')
+linha()
+
+# indices de listas compostas
+print('INDICES DE LISTAS COMPOSTAS \n')
+print('=-' * 20)
+print('pessoa = [ \n')
+print('indices      0       1   ')
+print('             ^       ^   ')
+print('             |       |      ')
+print("   0 --->['joao',    28], \n")
+print("   1 --->['monique', 25], \n")
+print("   2 --->['doroth',  7] \n")
+print('] \n')
+print(f'print(pessoa[0]) = {pessoa[0]} \n')
+print(f'print(pessoa[0][0]) = {pessoa[0][0]} \n')
+print(f'print(pessoa[0][1]) = {pessoa[1][1]} \n')
+print('=-' * 20)
+linha()
+
+# copiar lista dentro de outra lista
+print('COPIAR LISTA DENTRO DE OUTRA LISTA \n')
+print(f'pessoa = {pessoa} \n')
+
+copia1 = list()
+copia2 = list()
+print('fulano = list()')
+print('ciclano = list() \n')
+
+print(f'---> copiando uma lista inteira \n')
+print('copia1.append(pessoa[:])')
+copia1.append(pessoa[:])
+print(f'copia1 = {copia1}')
+print('-' * 30, '\n')
+
+
+print(f'---> copiando parte de uma lista \n')
+print('copia2.append(pessoa[:2])')
+copia2.append(pessoa[:2])
+print(f'copia2 = {copia2}')
+print('-' * 30, '\n')
+linha()
+
+
+# for em listas compostas
+print('FOR EM LISTAS COMPOSTAS \n')
+print('- ' * 30)
+print(f'pessoa = {pessoa} ')
+print('- ' * 30)
+
+print('\nfor p in pessoa: \n  print(p) \n')
+for p in pessoa:
+    print(p)
+
+print(f'\n{"-" * 30} \n')
+
+print('for p in pessoa: \n  print(p[0]) \n')
+for p in pessoa:
+    print(p[0])
+
+print(f'\n{"-" * 30} \n')
+
+print('for p in pessoa: \n  print(p[1]) \n')
+for p in pessoa:
+    print(p[1])
+linha()
